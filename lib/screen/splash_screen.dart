@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lab_connect/constants/text_style.dart';
+import 'package:lab_connect/screen/on_boarding_screen.dart';
 import 'package:lab_connect/widgets/progress_bar/liner_progress_bar.dart';
 
 import '../constants/colors.dart';
@@ -16,8 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Future.delayed(const Duration(seconds: 2), () {
-      // Check auth state and navigate accordingly
-      Navigator.pushReplacementNamed(context, '/onboarding');
+     Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=> OnboardingScreen()));
     });
   }
 
@@ -45,7 +45,7 @@ class _SplashScreenState extends State<SplashScreen> {
             Text(
               "Portable Lab || Guest speaker",
               style: AppTextStyles.size18(
-                color: Colors.black,
+                color: Colors.white54,
                 fontWeight: FontWeight.bold,
               ),
             ),
